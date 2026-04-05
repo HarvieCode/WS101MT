@@ -1,70 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Modern Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harvie Mamaril Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <nav>
-    <h2 class="logo">Zabala.dev</h2>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<div class="main">
 
-<!-- HERO -->
-<section class="hero">
-  <h1 class="fade-in">Hi, I'm <span>Your Name</span></h1>
-  <p class="fade-in">Frontend Developer • Student</p>
-  <a href="#projects" class="btn fade-in">View My Work</a>
-</section>
+    <!-- PROFILE HEADER -->
+    <section class="profile-header">
+        <div class="profile-img-box">
+            <img src="profile.jpg" class="profile-img" alt="Harvie Mamaril">
+            <div class="floating-badges">
+                <span>Java</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+            </div>
+        </div>
 
-<!-- ABOUT -->
-<section id="about" class="about fade-in">
-  <h2>About Me</h2>
-  <p>
-    I build clean and interactive websites. Passionate about coding,
-    UI design, and learning new technologies.
-  </p>
-</section>
+        <div class="profile-info">
+            <h1>Harvie Mamaril</h1>
+            <p class="location">📍 Pampanga, Philippines</p>
+            <p class="course">Bachelor of Science in Information Technology</p>
+            <p class="email">✉ harviemamaril@gmail.com</p>
 
-<!-- PROJECTS -->
-<section id="projects" class="projects">
-  <h2 class="fade-in">Projects</h2>
+            <div class="social-icons">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="https://github.com/HarvieCode" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </section>
 
-  <div class="project-container">
-    <div class="card fade-in">
-      <h3>Project One</h3>
-      <p>Simple web app project description.</p>
-    </div>
+    <!-- GRID -->
+    <section class="grid">
 
-    <div class="card fade-in">
-      <h3>Project Two</h3>
-      <p>Another cool project.</p>
-    </div>
+        <div class="card">
+            <h2>Midterms</h2>
+            <ul>
+                <li>Resume Writing</li>
+                <li>Unordered and Ordered Lists</li>
+                <li>Request for Proposal</li>
+                <li>Image Map</li>
+                <li>Resume (Internal CSS)</li>
+                <li>Display Property</li>
+                <li>Semantic CSS</li>
+                <li>CSS Layout</li>
+            </ul>
+        </div>
 
-    <div class="card fade-in">
-      <h3>Project Three</h3>
-      <p>Something interactive.</p>
-    </div>
-  </div>
-</section>
+        <div class="card">
+            <h2>About Me</h2>
+            <p>
+                Hi! I am Harvie, an Information Technology student passionate about web development,
+                programming, and building creative projects. I enjoy learning new technologies and
+                improving my coding skills every day.
+            </p>
+            <p>
+                My goal is to become a professional developer and create useful and innovative
+                applications that can help people and businesses.
+            </p>
+        </div>
 
-<!-- CONTACT -->
-<section id="contact" class="contact fade-in">
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-</section>
+        <div class="card">
+            <h2>Finals</h2>
+            <ul>
+                <li>CSS Position</li>
+                <li>Responsive Layout</li>
+                <li>JavaScript Interaction</li>
+                <li>Final Portfolio</li>
+            </ul>
+        </div>
 
-<footer>
-  <p>© 2026 Your Name</p>
-</footer>
+        <div class="card">
+            <h2>Projects</h2>
+            <ul>
+                <li>Portfolio Website</li>
+                <li>FitFusion Fitness App</li>
+                <li>Arduino Footstep Power Generator</li>
+                <li>More projects coming soon</li>
+            </ul>
+
+            <a href="https://github.com/HarvieCode" target="_blank" class="github-btn">
+                View GitHub
+            </a>
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 Harvie Mamaril. All rights reserved.
+    </footer>
+
+</div>
 
 <script src="script.js"></script>
 </body>
