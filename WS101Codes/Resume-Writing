@@ -85,11 +85,11 @@
 
 <body id="top">
 
-    <img src="picturess-Profiless.png" 
-         alt="Profile Picture" 
-         width="150" 
-         height="150" 
-         class="profile-img">
+    <img src="picturess/Profiless.png" 
+     alt="Profile Picture" 
+     width="150" 
+     height="150" 
+     class="profile-img">
 
     <div id="personal">
         <h2 class="h2style">MAMARIL, HARVIE H.</h2>
