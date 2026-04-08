@@ -1,373 +1,201 @@
-*{
-
+* {
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
     font-family: 'Poppins', sans-serif;
-
 }
-
-
 
 body {
-
     background: linear-gradient(135deg, #02110e, #052b24, #02110e);
-
     color: #d6fff7;
-
     min-height: 100vh;
-
 }
-
-
 
 .main {
-
     max-width: 1100px;
-
     margin: auto;
-
     padding: 40px;
-
 }
-
-
 
 /* Header Section */
-
 .profile-header {
-
     display: flex;
-
     gap: 30px;
-
     align-items: center;
-
     background: #031c17;
-
     padding: 30px;
-
     border-radius: 15px;
-
     box-shadow: 0 0 20px #00ffc344;
-
     margin-bottom: 25px;
-
 }
-
-
 
 /* Image Container */
-
 .profile-img-box {
-
     position: relative;
-
-    flex-shrink: 0; /* Prevents image from squishing */
-
+    flex-shrink: 0;
+    margin-right: 35px; /* Added: ensures floating badges don't cover text */
 }
-
-
 
 .profile-img {
-
     width: 130px;
-
     height: 130px;
-
     border-radius: 15px;
-
     border: 3px solid #00ffc3;
-
-    object-fit: cover;
-
+    object-fit: cover; /* Added: keeps image from stretching */
+    display: block;
 }
 
-
-
-/* Floating Badges - Positioned to the Right */
-
+/* Floating Badges */
 .floating-badges {
-
     position: absolute;
-
     top: 50%;
-
-    right: -30px; /* Moves them to overlap the right side */
-
-    transform: translateY(-50%); /* Centers them vertically */
-
+    right: -30px; 
+    transform: translateY(-50%); 
     display: flex;
-
     flex-direction: column;
-
     gap: 6px;
-
     z-index: 10;
-
 }
-
-
 
 .floating-badges span {
-
     background: #00ffc3;
-
     color: #02110e;
-
     padding: 4px 12px;
-
     border-radius: 8px;
-
     font-size: 11px;
-
     font-weight: 700;
-
     text-align: center;
-
     min-width: 60px;
-
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
-
     animation: float 3s infinite ease-in-out;
-
 }
 
-
-
-/* Profile Text Info */
-
+/* Profile Info */
 .profile-info h1 {
-
     color: #00ffc3;
-
     font-size: 2.2rem;
-
     margin-bottom: 5px;
-
 }
-
-
 
 .location, .course, .email {
-
     font-size: 14px;
-
     color: #b9fff0;
-
     margin-bottom: 4px;
-
     display: flex;
-
     align-items: center;
-
     gap: 8px;
-
 }
-
-
 
 /* Social Buttons */
-
 .social-icons {
-
     margin-top: 15px;
-
     display: flex;
-
     gap: 10px;
-
 }
-
-
 
 .social-icons a {
-
     padding: 8px 16px;
-
     border: 1px solid #00ffc3;
-
     border-radius: 10px;
-
     color: #00ffc3;
-
     text-decoration: none;
-
     font-size: 14px;
-
     transition: .3s;
-
 }
-
-
 
 .social-icons a:hover {
-
     background: #00ffc3;
-
     color: #02110e;
-
     box-shadow: 0 0 15px #00ffc3;
-
 }
-
-
 
 /* Grid Layout */
-
 .grid {
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 20px;
-
 }
-
-
 
 .card {
-
     background: #031c17;
-
     padding: 20px;
-
     border-radius: 15px;
-
     box-shadow: 0 0 15px #00ffc344;
-
     transition: .3s;
-
 }
-
-
 
 .card:hover {
-
     transform: translateY(-5px);
-
     box-shadow: 0 0 25px #00ffc366;
-
 }
-
-
 
 .card h2 {
-
     color: #00ffc3;
-
     margin-bottom: 10px;
-
 }
 
-
-
-.card ul {
-
-    padding-left: 20px;
-
+.activity-links {
+    list-style: none;
+    padding-left: 0 !important;
 }
 
+.activity-links a {
+    color: #d6fff7;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.8;
+    transition: color 0.2s;
+}
 
+.activity-links a:hover {
+    color: #00ffc3;
+}
 
 .github-btn {
-
     display: inline-block;
-
     margin-top: 15px;
-
     padding: 10px 20px;
-
     border: 1px solid #00ffc3;
-
     border-radius: 10px;
-
     color: #00ffc3;
-
     text-decoration: none;
-
     transition: .3s;
-
 }
-
-
 
 .github-btn:hover {
-
     background: #00ffc3;
-
     color: #02110e;
-
 }
-
-
 
 footer {
-
     text-align: center;
-
     margin-top: 40px;
-
     padding: 20px;
-
     border-top: 1px solid #00ffc355;
-
     font-size: 13px;
-
     opacity: 0.7;
-
 }
 
-
-
-/* Animation */
-
+/* Animation Fix: Preserves vertical centering while floating horizontally */
 @keyframes float {
-
-    0% { transform: translateX(0); }
-
-    50% { transform: translateX(5px); }
-
-    100% { transform: translateX(0); }
-
+    0% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-50%) translateX(6px); }
+    100% { transform: translateY(-50%) translateX(0); }
 }
-
-
-
-/* Responsive adjustments */
 
 @media(max-width: 768px) {
-
     .profile-header {
-
         flex-direction: column;
-
         text-align: center;
-
     }
-
-    
-
+    .profile-img-box {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
     .floating-badges {
-
-        right: -15px; /* Pulls them in slightly on mobile */
-
+        right: -20px;
     }
-
-
-
-    .social-icons {
-
-        justify-content: center;
-
-    }
-
-
-
     .grid {
-
         grid-template-columns: 1fr;
+    }
+}
