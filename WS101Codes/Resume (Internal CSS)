@@ -1,221 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Harvie H. Mamaril - Resume</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6; /* Soft light grey background */
-            color: #333;
-            line-height: 1.6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harvie Mamaril Resume</title>
 
-        /* Header Section */
-        .header {
-            background-color: #1a202c; /* Midnight Navy Header */
-            padding: 50px 30px;
-            text-align: left;
-            border-bottom: 5px solid #2d3748;
-        }
+<style>
+    /* General Styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #4a69bd, #6a89cc);
+        color: #fff;
+    }
 
-        .profile-img {
-            border: 4px solid #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            margin-bottom: 20px;
-        }
+    a {
+        color: #ffeaa7;
+        text-decoration: none;
+    }
 
-        .name-box {
-            background-color: #ffffff;
-            color: #1a202c;
-            display: inline-block;
-            padding: 8px 20px;
-            font-weight: 800;
-            font-size: 28px;
-            border-radius: 4px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+    a:hover {
+        text-decoration: underline;
+    }
 
-        /* Contact Section */
-        .contact-info {
-            background-color: #2d3748; /* Darker grey sub-header */
-            color: #edf2f7;
-            padding: 20px 30px;
-            font-size: 14px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
+    /* Top section */
+    #top {
+        text-align: center;
+        padding: 20px;
+    }
 
-        .contact-info a {
-            color: #63b3ed;
-            text-decoration: none;
-        }
+    #top img {
+        width: 120px;
+        border-radius: 10px;
+        border: 2px solid #fff;
+    }
 
-        /* Content Sections */
-        .main-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
-        }
+    #contact-info {
+        text-align: center;
+        margin: 15px 0;
+    }
 
-        h4 {
-            color: #2c5282;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 8px;
-            margin-top: 35px;
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    #contact-info h1 {
+        font-size: 1.8em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 10px 0;
+    }
 
-        h5 {
-            color: #2d3748;
-            margin-bottom: 5px;
-            font-size: 16px;
-        }
+    #contact-info p {
+        margin: 3px 0;
+        font-size: 0.95em;
+    }
 
-        p, li {
-            font-size: 14px;
-            color: #4a5568;
-        }
+    hr {
+        border: 0;
+        border-top: 1px solid #fff;
+        margin: 20px 0;
+        opacity: 0.3;
+    }
 
-        /* Navigation Links style */
-        .nav-links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-        }
+    /* Links list */
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
 
-        .nav-links li {
-            font-weight: 600;
-            color: #4a5568;
-            background: #edf2f7;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
+    ul li {
+        margin-bottom: 5px;
+    }
 
-        .nav-links li:hover {
-            background: #cbd5e0;
-        }
+    ul li a {
+        font-weight: 500;
+    }
 
-        /* Table Style */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
+    /* Headings */
+    h2, h3 {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 5px;
+        margin-top: 20px;
+        font-weight: 600;
+    }
 
-        th, td {
-            border: 1px solid #e2e8f0;
-            padding: 12px;
-            text-align: left;
-        }
+    h3 {
+        font-size: 1.2em;
+        margin-top: 15px;
+    }
 
-        th {
-            background-color: #f8fafc;
-            color: #2d3748;
-            font-size: 12px;
-        }
+    /* Tables */
+    table {
+        width: 90%;
+        border-collapse: collapse;
+        margin: 10px auto;
+    }
 
-        .footer-cert {
-            font-style: italic;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #e2e8f0;
-            font-size: 12px;
-            color: #718096;
-        }
-    </style>
+    table th, table td {
+        border: 1px solid #fff;
+        padding: 8px;
+        text-align: left;
+    }
+
+    table th {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Certification */
+    p i {
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+        font-size: 0.9em;
+    }
+
+    /* Back to Top link */
+    p a[href="#top"] {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+</style>
 </head>
 <body>
 
-    <div class="header">
-        <img src="picturess/vie.png" alt="Profile Picture" width="130" class="profile-img">
-        <br>
-        <div class="name-box">MAMARIL, HARVIE H.</div>
-    </div>
+<div id="top">
+    <img src="HARVIE.png" alt="Harvie Mamaril">
+</div>
 
-    <div class="contact-info">
-        <div><strong>Email:</strong> <a href="mailto:harviemamaril@gmail.com">harviemamaril@gmail.com</a></div>
-        <div><strong>Phone:</strong> 0916 178 1041</div>
-        <div><strong>Address:</strong> Magalang, Pampanga</div>
-    </div>
+<div id="contact-info">
+    <h1>MAMARIL, HARVIE H.</h1>
+    <p><strong>Email:</strong> <a href="mailto:harviemamaril@gmail.com">harviemamaril@gmail.com</a></p>
+    <p><strong>Phone:</strong> 0916 178 1041</p>
+    <p><strong>Address:</strong> Sta. Lucia Resettlement, Magalang, Pampanga</p>
+    <p><strong>LinkedIn:</strong> <a href="#">Your LinkedIn Link</a></p>
+</div>
 
-    <div class="main-container">
-        <ul class="nav-links">
-            <li>Education</li>
-            <li>Experience</li>
-            <li>Skills</li>
-            <li>References</li>
-        </ul>
+<hr>
 
-        <h4>Career Objective</h4>
-        <p>To obtain an entry-level position where I can apply my computer technology knowledge, improve my skills, and gain practical work experience within a professional IT environment.</p>
+<h2>Links</h2>
+<ul>
+    <li><a href="#career">Career Objective</a></li>
+    <li><a href="#expertise">Expertise Bio</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Work Experience</a></li>
+    <li><a href="#hardware">Hardware Skills</a></li>
+    <li><a href="#software">Software Skills</a></li>
+    <li><a href="#additional">Additional Skills</a></li>
+    <li><a href="#character">Character References</a></li>
+</ul>
 
-        <h4>Education</h4>
-        <ul style="list-style-type: none; padding-left: 0;">
-            <li><strong>Pampanga State Agricultural University</strong><br>Bachelor of Science in Information Technology (Ongoing)</li>
-            <li style="margin-top: 10px;"><strong>Tinajero National High School Annex</strong><br>Senior High School Graduate</li>
-        </ul>
+<h3 id="career">Career Objective</h3>
+<p>To obtain an entry-level position where I can apply my computer technology knowledge, improve my skills, and gain practical work experience.</p>
 
-        <h4>Technical Skills</h4>
-        <div style="display: flex; gap: 40px;">
-            <div>
-                <h5>Hardware</h5>
-                <ul>
-                    <li>PC Assembly</li>
-                    <li>Troubleshooting</li>
-                    <li>System Maintenance</li>
-                </ul>
-            </div>
-            <div>
-                <h5>Software</h5>
-                <ul>
-                    <li>HTML / CSS</li>
-                    <li>Python & Java</li>
-                    <li>MS Office Suite</li>
-                </ul>
-            </div>
-        </div>
+<h3 id="expertise">Expertise Bio</h3>
+<p>Computer Technology student with basic knowledge in computer systems, software applications, and technical support. Willing to learn, responsible, and adaptable in a professional environment.</p>
 
-        <h4>Character References</h4>
-        <table>
-            <thead>
-                <tr>
-                    <th>Full Name</th>
-                    <th>Designation</th>
-                    <th>Contact Number</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Mr. Juan D. Cruz</td>
-                    <td>IT Instructor</td>
-                    <td>09XX XXX XXXX</td>
-                </tr>
-                <tr>
-                    <td>Ms. Maria L. Santos</td>
-                    <td>Senior Programmer</td>
-                    <td>09XX XXX XXXX</td>
-                </tr>
-            </tbody>
-        </table>
+<h3 id="education">Education</h3>
+<ul>
+    <li><strong>Pampanga State Agricultural University</strong> – Bachelor of Science in Information Technology (Ongoing)</li>
+    <li><strong>Tinajero National High School Annex</strong> – Senior High School Graduate</li>
+    <li><strong>Eliseo Belen Elementary School</strong> – Elementary Graduate</li>
+</ul>
 
-        <p class="footer-cert">I HEREBY CERTIFY that the information provided in this form is complete, true, and correct to the best of my knowledge.</p>
-    </div>
+<h3 id="experience">Work Experience / Seminars and Workshops Attended</h3>
+
+<b>IT Support Intern</b><br>
+Pampanga State Agricultural University<br>
+Magalang, Pampanga | January 2025 – Present
+<ul>
+    <li>Provided first-level technical support to students and faculty</li>
+    <li>Troubleshot basic hardware, software, and network connectivity issues</li>
+    <li>Installed and configured operating systems and essential applications</li>
+    <li>Assisted in maintaining computer laboratories and IT equipment</li>
+    <li>Documented common technical issues and solutions</li>
+</ul>
+
+<b>Computer Laboratory Assistant (Part-Time)</b><br>
+Pampanga State Agricultural University | 2024 – 2025
+<ul>
+    <li>Assisted in the daily operation of computer laboratories</li>
+    <li>Helped users with basic Microsoft Office applications</li>
+    <li>Performed routine system checks and preventive maintenance</li>
+    <li>Reported hardware and system issues to IT department</li>
+</ul>
+
+<h3 id="hardware">Hardware Skills</h3>
+<ul>
+    <li>IBM PC and compatibles</li>
+    <li>Apple Macintosh</li>
+    <li>UNIX systems</li>
+</ul>
+
+<h3 id="software">Software Skills</h3>
+<ul>
+    <li>HTML, CSS, JavaScript</li>
+    <li>Microsoft Office Suite</li>
+    <li>Visual Basic, C++, Java</li>
+</ul>
+
+<h3 id="additional">Additional Skills</h3>
+<ul>
+    <li>Organizational skills</li>
+    <li>Adaptability</li>
+    <li>Time management</li>
+    <li>Attention to detail</li>
+    <li>Data analysis</li>
+</ul>
+
+<h3 id="character">Character References</h3>
+<table>
+    <tr>
+        <th>Full Name</th>
+        <th>Designation</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+    </tr>
+    <tr>
+        <td>Mr. Juan D. Cruz</td>
+        <td>IT Instructor</td>
+        <td>juan.cruz@email.com</td>
+        <td>09XX XXX XXXX</td>
+    </tr>
+    <tr>
+        <td>Ms. Maria L. Santos</td>
+        <td>Senior Programmer</td>
+        <td>maria.santos@email.com</td>
+        <td>09XX XXX XXXX</td>
+    </tr>
+</table>
+
+<p><i>I HEREBY CERTIFY that the information provided above is true and correct to the best of my knowledge.</i></p>
+<p><a href="#top">Back to Top</a></p>
 
 </body>
 </html>
